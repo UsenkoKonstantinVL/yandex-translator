@@ -3,10 +3,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 /**
- * Created by toshiba on 16.03.2017.
+ * Класс для извлечения из json текста ответа от сервера
  */
 public class ResponseJSONParser implements ResponseParser {
 
+    /***
+     * Функция для извлечения из json ответа от сервера, т.е. перевода
+     * @param response входной json текст
+     * @return ответ сервера
+     */
     @Override
     public String parseResponse(String response) {
         JSONParser jsonParser = new JSONParser();

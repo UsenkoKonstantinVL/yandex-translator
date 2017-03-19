@@ -5,7 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by toshiba on 16.03.2017.
+ * Translator - класс - переводчик входных строк
  */
 public class Translator {
 
@@ -22,6 +22,11 @@ public class Translator {
         parser = new ResponseJSONParser();
     }
 
+    /***
+     * Функция перевода входной строки с английского на русский
+     * @param translateString - входная строка на английском языке
+     * @return перевод на русский язык входной строки
+     */
     public String translate(String translateString){
         String params = String.format("key=%s&text=%s&lang=%s", key, translateString, lanTr);
         byte[] data = null;
